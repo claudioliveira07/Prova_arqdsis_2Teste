@@ -1,23 +1,22 @@
 package br.usjt.simulado;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
 
     public class MainActivity extends AppCompatActivity {
 
+        public final static String EXTRA_MESSAGE_SPINNER = "br.usjt.meuprimeiroapp.MESSAGE_SPINNER";
+        public final static String EXTRA_MESSAGE_NAME = "br.usjt.meuprimeiroapp.MESSAGE_NAME";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
-
-    public final static String EXTRA_MESSAGE_SPINNER = "br.usjt.meuprimeiroapp.MESSAGE_SPINNER";
-        public final static String EXTRA_MESSAGE_NAME = "br.usjt.meuprimeiroapp.MESSAGE_NAME";
 
     //será chamado quando o usuário clicar em Enviarabflheabifea
     public void exibirLivros(View view) {
@@ -33,7 +32,7 @@ import android.widget.Spinner;
         }else{
             intent = new Intent(this, ExibirLivros.class);
         }
-        //testsfuagygufeayuf
+        //testsfuagygufeayufaaaaa
         intent.putExtra(EXTRA_MESSAGE_NAME, name_string);
         startActivity(intent);
     }
